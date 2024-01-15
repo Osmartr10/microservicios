@@ -1,0 +1,171 @@
+version: '3.4'
+
+services:
+  apigateway:
+    image: apigateway:dev
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "ApiGateway"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\ApiGateway:/app
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios:/src
+      - C:\Users\Hp\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Hp\.nuget\packages\:/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net6.0:/HotReloadProxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/ApiGateway.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  appcliente:
+    image: appcliente:dev
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "AppCliente"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\AppCliente:/app
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios:/src
+      - C:\Users\Hp\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Hp\.nuget\packages\:/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net6.0:/HotReloadProxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/AppCliente.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  estudianteapi:
+    image: estudianteapi:dev
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "EstudianteApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteApi:/app
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios:/src
+      - C:\Users\Hp\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Hp\.nuget\packages\:/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net6.0:/HotReloadProxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/EstudianteApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  libroapi:
+    image: libroapi:dev
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "LibroApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroApi:/app
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios:/src
+      - C:\Users\Hp\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Hp\.nuget\packages\:/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net6.0:/HotReloadProxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net6.0/LibroApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  prestamoapi:
+    image: prestamoapi:dev
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "PrestamoApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoApi:/app
+      - D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios:/src
+      - C:\Users\Hp\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Hp\.nuget\packages\:/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net6.0:/HotReloadProxy:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/PrestamoApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

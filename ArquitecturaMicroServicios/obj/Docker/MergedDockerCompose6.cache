@@ -1,0 +1,46 @@
+name: dockercompose6987539237249548737
+services:
+  estudianteapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: EstudianteApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: estudianteapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+  libroapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: LibroApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: libroapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+  prestamoapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: PrestamoApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: prestamoapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose6987539237249548737_default

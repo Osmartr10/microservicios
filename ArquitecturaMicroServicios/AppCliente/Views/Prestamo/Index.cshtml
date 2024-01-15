@@ -1,0 +1,113 @@
+﻿@model IEnumerable<AppCliente.Models.Prestamo>
+@using AppCliente.Services
+@using AppCliente.Models
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            LISTA PRESTAMOS |
+            <a asp-controller="Prestamo" asp-action="Create" class="btn btn-success btn-fw">Crear Nuevo</a>
+        </h3>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID Prestamo
+                                    </th>
+                                    <th>
+                                        Estudiante
+                                    </th>
+                                    <th>
+                                        Fecha Prestamo
+                                    </th>
+                                    <th>
+                                        Fecha Devolucion
+                                    </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                    <th>
+                                        Opciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Idprestamo)
+                                        </td>
+                                        <td>
+                                            @{
+                                                EstudianteService estudianteService = new EstudianteService();
+                                                Estudiante estudiante = await estudianteService.ObtenerEstudiante(item.Idestudiante);
+                                            }
+                                            @if (estudiante != null)
+                                            {
+                                                @Html.DisplayFor(modelItem => estudiante.NombreCompleto)
+                                            }
+                                            else
+                                            {
+                                                @Html.DisplayFor(modelItem => item.Idestudiante)
+                                            }
+
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FechaPrestamo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FechaDevolucion)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Estado)
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Prestamo" asp-action="Edit"
+                                               asp-route-id="@item.Idprestamo" class="btn btn-warning btn-fw">Editar</a> |
+                                            <a asp-controller="Prestamo" asp-action="Detail"
+                                               asp-route-id="@item.Idprestamo" class="btn btn-info btn-fw">Detalle</a> |
+                                            <button type="button" class="btn btn-danger btn-fw" onclick="PreEliminar('@item.Idprestamo')">Eliminar</button>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Inicio -->
+<div class="modal fade" id="eliminarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel-2">Eliminar Prestamo</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="IdEliminar" />
+                <p>¿Esta seguro que quiere eliminar al Prestamo?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="Eliminar()" class="btn btn-danger">Si,Eliminar</button>
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Fin -->
+<script src="~/js/Prestamo.js"></script>

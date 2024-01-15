@@ -1,0 +1,15 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\bin\Debug\net8.0\EstudianteInfrastructure.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\bin\Debug\net8.0\EstudianteInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\bin\Debug\net8.0\EstudianteInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\bin\Debug\net8.0\EstudianteDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\bin\Debug\net8.0\EstudianteDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.csproj.AssemblyReference.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.csproj.CopyComplete
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\refint\EstudianteInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\EstudianteInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteInfrastructure\obj\Debug\net8.0\ref\EstudianteInfrastructure.dll

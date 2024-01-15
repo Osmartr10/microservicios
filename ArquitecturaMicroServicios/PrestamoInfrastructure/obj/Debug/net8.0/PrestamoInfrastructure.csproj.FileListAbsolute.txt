@@ -1,0 +1,15 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\bin\Debug\net8.0\PrestamoInfrastructure.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\bin\Debug\net8.0\PrestamoInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\bin\Debug\net8.0\PrestamoInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\bin\Debug\net8.0\PrestamoDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\bin\Debug\net8.0\PrestamoDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.csproj.AssemblyReference.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.csproj.CopyComplete
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\refint\PrestamoInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\PrestamoInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoInfrastructure\obj\Debug\net8.0\ref\PrestamoInfrastructure.dll

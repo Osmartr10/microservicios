@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppCliente</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/select2.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vendor.bundle.base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vendor.bundle.addons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    
+    <link rel="stylesheet" href="~/AppCliente.styles.css" asp-append-version="true" />
+</head>
+<body class="sidebar-dark">
+
+    <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar navbar-primary">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="#"><img src="~/images/logotipoazul.png" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="#"><img src="~/images/logoupdsblanco.png" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <ul class="navbar-nav navbar-nav-right">
+                </ul>
+
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fa fa-home menu-icon"></i>
+                            <span class="menu-title">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Autor" asp-action="Index">
+                            <i class="far fa fa-address-book menu-icon"></i>
+                            <span class="menu-title">Autores</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Libro" asp-action="Index">
+                            <i class="fas fa-book menu-icon"></i>
+                            <span class="menu-title">Libros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Estudiante" asp-action="Index">
+                            <i class="fas fa-users menu-icon"></i>
+                            <span class="menu-title">Estudiantes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Prestamo" asp-action="Index">
+                            <i class="fas fa-edit menu-icon"></i>
+                            <span class="menu-title">Prestamos</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="main-panel">
+                @RenderBody()
+
+            </div>
+        </div>
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/vendor.bundle.base.js" asp-append-version="true"></script>
+    <script src="~/js/vendor.bundle.addons.j" asp-append-version="true"></script>
+    <script src="~/js/select2.min.js" asp-append-version="true"></script>
+    <script src="~/js/off-canvas.js" asp-append-version="true"></script>
+    <script src="~/js/hoverable-collapse.js" asp-append-version="true"></script>
+    <script src="~/js/misc.js" asp-append-version="true"></script>
+    <script src="~/js/settings.js" asp-append-version="true"></script>
+    <script src="~/js/todolist.js" asp-append-version="true"></script>
+    <script src="~/js/dashboard.js" asp-append-version="true"></script>
+    <script src="~/js/modal-demo.js" asp-append-version="true"></script>   
+   
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.select2').select2()
+            $(".js-example-tags").select2({
+                tags: true
+            });
+        }
+        )
+
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

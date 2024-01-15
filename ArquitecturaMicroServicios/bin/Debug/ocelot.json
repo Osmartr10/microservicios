@@ -1,0 +1,141 @@
+{
+  "Routes": [
+    //Estudiante Api
+    {
+      "UpstreamPathTemplate": "/api/Estudiante",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estudianteapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Estudiante"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Estudiante/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estudianteapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Estudiante/{id}"
+    },
+    // Libro Api
+    {
+      "UpstreamPathTemplate": "/api/Libro",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Libro"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Libro/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Libro/{id}"
+    },
+
+    // Autor 
+    {
+      "UpstreamPathTemplate": "/api/Autor",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Autor"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Autor/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Autor/{id}"
+    },
+
+    // AutorLibro
+    {
+      "UpstreamPathTemplate": "/api/AutorLibro",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/AutorLibro"
+    },
+    {
+      "UpstreamPathTemplate": "/api/AutorLibro/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "libroapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/AutorLibro/{id}"
+    },
+
+    //Prestamo Api
+    {
+      "UpstreamPathTemplate": "/api/Prestamo",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "prestamoapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Prestamo"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Prestamo/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "prestamoapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Prestamo/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:800"
+  }
+}

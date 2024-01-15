@@ -1,0 +1,11 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\bin\Debug\net8.0\EstudianteDomain.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\bin\Debug\net8.0\EstudianteDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\bin\Debug\net8.0\EstudianteDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\refint\EstudianteDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\EstudianteDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\EstudianteDomain\obj\Debug\net8.0\ref\EstudianteDomain.dll

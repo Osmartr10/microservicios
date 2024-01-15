@@ -1,0 +1,11 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\bin\Debug\net6.0\LibroDomain.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\bin\Debug\net6.0\LibroDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\bin\Debug\net6.0\LibroDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\refint\LibroDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\LibroDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroDomain\obj\Debug\net6.0\ref\LibroDomain.dll

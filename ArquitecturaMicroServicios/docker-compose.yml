@@ -1,0 +1,102 @@
+version: '3.4'
+
+networks:
+    backend:
+    frontend:
+
+services:
+  microserviciolibro:
+    container_name: libro-bd
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@12345#
+    networks:
+      - backend 
+    ports:
+      - 18001:1433 
+
+
+  libroapi:
+    container_name: libro-api
+    image: ${DOCKER_REGISTRY-}libroapi
+    build:
+      context: .
+      dockerfile: LibroApi/Dockerfile
+    networks:
+      - backend 
+    environment:
+     - DB_HOST=microserviciolibro
+     - DB_NAME=librobd
+     - DB_SA_PASSWORD=password@12345#
+
+  microservicioestudiante: 
+    container_name: estudiante-bd
+    image: mysql:8.2.0-oracle
+    environment:
+      - MYSQL_ROOT_PASSWORD=password@12345#
+    ports:
+      - 18003:3306
+    networks:
+      - backend
+   
+
+  estudianteapi:
+    container_name: estudiante-api
+    image: ${DOCKER_REGISTRY-}estudianteapi
+    build:
+      context: .
+      dockerfile: EstudianteApi/Dockerfile
+    networks:
+      - backend 
+    environment:
+     - DB_HOST=microservicioestudiante
+     - DB_NAME=estudiantebd
+     - DB_ROOT_PASSWORD=password@12345#
+  
+  microservicioprestamo:
+    container_name: prestamo-bd
+    image: mongo
+    ports:
+     - 18005:27017
+    networks:
+     - backend
+
+
+  prestamoapi:
+    container_name: prestamo-api
+    image: ${DOCKER_REGISTRY-}prestamoapi
+    build:
+      context: .
+      dockerfile: PrestamoApi/Dockerfile
+    networks:
+      - backend 
+    environment:
+     - DB_HOST=microservicioprestamo
+     - DB_NAME=prestamobd
+
+
+  apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    ports:
+     - 8001:8080
+    networks:
+     - backend
+     - frontend
+
+
+  appcliente:
+    container_name: app-cliente
+    image: ${DOCKER_REGISTRY-}appcliente
+    build:
+      context: .
+      dockerfile: AppCliente/Dockerfile
+    ports:
+     - 8002:8080
+    networks:
+     - frontend
+

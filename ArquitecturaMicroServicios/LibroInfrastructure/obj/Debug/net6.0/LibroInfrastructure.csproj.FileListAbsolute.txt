@@ -1,0 +1,17 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroInfrastructure.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroInfrastructure.runtimeconfig.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\bin\Debug\net6.0\LibroDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.csproj.AssemblyReference.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.csproj.CopyComplete
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\refint\LibroInfrastructure.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\LibroInfrastructure.genruntimeconfig.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\LibroInfrastructure\obj\Debug\net6.0\ref\LibroInfrastructure.dll

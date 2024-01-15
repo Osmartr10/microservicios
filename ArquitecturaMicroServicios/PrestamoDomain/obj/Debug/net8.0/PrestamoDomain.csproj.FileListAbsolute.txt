@@ -1,0 +1,12 @@
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\bin\Debug\net8.0\PrestamoDomain.deps.json
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\bin\Debug\net8.0\PrestamoDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\bin\Debug\net8.0\PrestamoDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.csproj.AssemblyReference.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.AssemblyInfoInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.AssemblyInfo.cs
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.csproj.CoreCompileInputs.cache
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\refint\PrestamoDomain.dll
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\PrestamoDomain.pdb
+D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios\PrestamoDomain\obj\Debug\net8.0\ref\PrestamoDomain.dll

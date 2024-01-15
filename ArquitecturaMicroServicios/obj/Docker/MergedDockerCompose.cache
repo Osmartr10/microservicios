@@ -1,0 +1,133 @@
+name: dockercompose6987539237249548737
+services:
+  apigateway:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: ApiGateway/Dockerfile
+    container_name: api-gateway
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: apigateway
+    networks:
+      backend: null
+      frontend: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        published: "8001"
+        protocol: tcp
+  appcliente:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: AppCliente/Dockerfile
+    container_name: app-cliente
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: appcliente
+    networks:
+      frontend: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        published: "8002"
+        protocol: tcp
+  estudianteapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: EstudianteApi/Dockerfile
+    container_name: estudiante-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      DB_HOST: microservicioestudiante
+      DB_NAME: estudiantebd
+      DB_ROOT_PASSWORD: password@12345#
+    image: estudianteapi
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+  libroapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: LibroApi/Dockerfile
+    container_name: libro-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: microserviciolibro
+      DB_NAME: librobd
+      DB_SA_PASSWORD: password@12345#
+    image: libroapi
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+  microservicioestudiante:
+    container_name: estudiante-bd
+    environment:
+      MYSQL_ROOT_PASSWORD: password@12345#
+    image: mysql:8.2.0-oracle
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 3306
+        published: "18003"
+        protocol: tcp
+  microserviciolibro:
+    container_name: libro-bd
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "18001"
+        protocol: tcp
+  microservicioprestamo:
+    container_name: prestamo-bd
+    image: mongo
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "18005"
+        protocol: tcp
+  prestamoapi:
+    build:
+      context: D:\Implementacion II\Ejemplo\ArquitecturaMicroServicios
+      dockerfile: PrestamoApi/Dockerfile
+    container_name: prestamo-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      DB_HOST: microservicioprestamo
+      DB_NAME: prestamobd
+    image: prestamoapi
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  backend:
+    name: dockercompose6987539237249548737_backend
+  frontend:
+    name: dockercompose6987539237249548737_frontend
